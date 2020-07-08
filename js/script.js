@@ -4,29 +4,31 @@ let time =4000, indexImage = 0,
     images = document.querySelectorAll(".slide img"),
     maxImages = images.length;
 
-// variáveis de mudar o banner clicando
+// Mudando os pointers junto com as imagens
 
-let pointer = document.querySelectorAll(".pointer .point"),
-    position = 0;
-
-
+let pointer = document.querySelectorAll(".pointer .point"),indexPointer = 0,
+    maxPointer = pointer.length;
 
 
-    // rotaciona o banner
+// rotaciona o banner
 
 function rotationImage() {
 
-    images[indexImage].classList.remove("selected");
+    images[indexImage].classList.remove("selected"); // remove a class atual em 2 segundos da imagem
+    pointer[indexPointer].classList.remove("marked"); // remove a class atual em 2 segundos do pointer
 
-    indexImage++;
+    indexImage++; //index vai até o valor 2
+    indexPointer++; // vai até o valor 2
 
-    if(indexImage >= maxImages) {
+    if(indexImage >= maxImages) { // quando index chega ao maxImage(3)
 
-        indexImage = 0;
+        indexImage = 0;  // zera a index
+        indexPointer = 0; // zera o pointer
 
     }
 
-    images[indexImage].classList.add("selected");
+    images[indexImage].classList.add("selected"); // adiciona na primeira imagem
+    pointer[indexPointer].classList.add("marked"); // adiciona na segunda imagem
 
 
 }
@@ -39,28 +41,10 @@ function rotationStart() {
 
         rotationImage();
 
-
     }, time);
-
 
 }
 
 window.addEventListener("load", rotationStart);
 
 
-function choicePoint() {
-
-    pointer.forEach(point => {
-
-        point.addEventListener("click", () => {
-
-        
-
-          
-        });
-
-
-    });
-
-
-}
