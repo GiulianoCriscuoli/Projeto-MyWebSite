@@ -1,4 +1,4 @@
-let time =2000, indexImage = 0,
+let time =4000, indexImage = 0,
     images = document.querySelectorAll(".slide img"),
     maxImages = images.length;
 
@@ -28,7 +28,7 @@ function rotationStart() {
         rotationImage();
 
 
-    }, 2000);
+    }, time);
 
 
 }
