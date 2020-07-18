@@ -48,3 +48,45 @@ function rotationStart() {
 window.addEventListener("load", rotationStart);
 
 
+// Imagens do content-2
+
+
+let contentImages = document.querySelectorAll(".content-2 .image-content img");
+let time2 = 200;
+
+    contentImages.forEach(item => {
+
+        item.addEventListener("mouseover", function() {
+
+        setTimeout(() => {
+
+            item.style.width = '210px';
+            item.style.height = '210px';
+
+        }, time2);
+           
+        
+        });
+
+
+    });
+
+    contentImages.forEach(item => {
+
+        item.addEventListener("mouseout", function() {
+        
+        setTimeout(() => {
+
+            item.style.width = '200px';
+            item.style.height = '200px';
+
+        }, time2)
+            
+
+        });
+
+    });
+
+
+
+
