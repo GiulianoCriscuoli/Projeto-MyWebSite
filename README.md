@@ -1,10 +1,10 @@
 # Projeto-MyWebSite
 
+![](images/website.gif)
+
 ## Descrição
 
-Site fictício para praticar javascript.
-
-![](images/website.gif)
+Site fictício para fixar conhecimentos de javascript e a criação de slideshow.
 
 # Tecnologias utilizadas 
 
